@@ -5,7 +5,7 @@ import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // Importing components
-import Join from "./components/Join.jsx";
+import Join from "./components/Join/Join.jsx";
 import Chat from "./components/Chat/Chat.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
