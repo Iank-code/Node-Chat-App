@@ -14,19 +14,31 @@ export default function Join() {
           <input
             className="joinInput"
             type="text"
-            placeholder=""
-            onChange={""}
+            placeholder="Name"
+            onChange={(e) => {
+              (e) => {
+                setName(e.target.value);
+              };
+            }}
           />
         </div>
 
         <div>
           <input
-            className="joinInput"
+            className="joinInput mt-20"
             type="text"
-            placeholder=""
-            onChange={""}
+            placeholder="Room"
+            onChange={(e) => {
+              setRoom(e.target.value);
+            }}
           />
         </div>
+
+        <Link>
+          <button className="button mt-20" type="submit">
+            Sign In
+          </button>
+        </Link>
       </div>
     </div>
   );
