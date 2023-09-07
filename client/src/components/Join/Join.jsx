@@ -9,36 +9,27 @@ export default function Join() {
     <div className="joinOuterContainer">
       <div className="joinInnerContainer">
         <h1 className="heading">Join</h1>
-
         <div>
           <input
+            placeholder="Name"
             className="joinInput"
             type="text"
-            placeholder="Name"
-            onChange={(e) => {
-              (e) => {
-                setName(e.target.value);
-              };
-            }}
+            onChange={(event) => setName(event.target.value)}
           />
         </div>
-
         <div>
           <input
+            placeholder="Room"
             className="joinInput mt-20"
             type="text"
-            placeholder="Room"
-            onChange={(e) => {
-              setRoom(e.target.value);
-            }}
+            onChange={(event) => setRoom(event.target.value)}
           />
         </div>
-
         <Link
-          onClick={(event) => (!name || !room ? event.preventDefault() : null)}
+          // onClick={(e) => (!name || !room ? e.preventDefault() : null)}
           to={`/chat?name=${name}&room=${room}`}
         >
-          <button className="button mt-20" type="submit">
+          <button className={"button mt-20"} type="submit">
             Sign In
           </button>
         </Link>
